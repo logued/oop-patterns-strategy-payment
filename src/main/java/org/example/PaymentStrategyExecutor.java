@@ -5,21 +5,23 @@ package org.example;
 //  that it can execute (run)
 //
 class PaymentStrategyExecutor {
-    private PaymentStrategy strategy;
+
+    private PaymentStrategy _strategy;
 
     // Allow changing strategy at runtime
     // Accept a concrete payment strategy that implements
     // the PaymentStrategy interface.
     //
     public void setPaymentStrategy(PaymentStrategy strategy) {
-        this.strategy = strategy;
+        _strategy = strategy;
     }
 
     // execute the payment using the specific payment strategy
+    //
     public void execute(double amount) {
-        if (strategy == null) {
+        if (_strategy == null) {
             throw new IllegalStateException("Payment strategy not set.");
         }
-        strategy.pay(amount);
+        _strategy.pay(amount);
     }
 }

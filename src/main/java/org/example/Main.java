@@ -20,5 +20,14 @@ public class Main {
 
         // We can add further Payment strategies without changing what already exists.
 
+        //TODO
+        // Write a new concrete VisaPayment class that will implement the pay()
+        // method to pay by Visa.  Write code in main to set the payment strategy
+        // to be VisaPayment and then test it by making a payment.
+        // No changes are required in the PaymentStrategyExecutor class
+        // and this is the point - it is independent of the concrete payment
+        // strategy.
+
+
     }
 }
