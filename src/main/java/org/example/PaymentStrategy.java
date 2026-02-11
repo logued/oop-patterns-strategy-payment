@@ -11,4 +11,4 @@ interface PaymentStrategy {
 
 // All payment strategies must allow us to call pay(),
 // but the exact details of how that payment is to be conducted
-// is coded in the concrete payment class.
+// is coded in the concrete payment strategy class.

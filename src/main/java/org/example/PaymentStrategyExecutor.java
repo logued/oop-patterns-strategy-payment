@@ -2,13 +2,13 @@ package org.example;
 
 
 //  A "Context" class that can be set with a specific concrete execution strategy
-//  that it can execute (run)
+//  that it can execute (run)   (Dependency Injection)
 //
 class PaymentStrategyExecutor {
 
-    private PaymentStrategy _strategy;
+    private PaymentStrategy _strategy;  // underscore indicates an instance variable (field)
 
-    // Allow changing strategy at runtime
+    // Allow changing of the strategy at runtime
     // Accept a concrete payment strategy that implements
     // the PaymentStrategy interface.
     //
@@ -19,9 +19,9 @@ class PaymentStrategyExecutor {
     // execute the payment using the specific payment strategy
     //
     public void execute(double amount) {
-        if (_strategy == null) {
+        if ( _strategy == null ) {
             throw new IllegalStateException("Payment strategy not set.");
         }
-        _strategy.pay(amount);
+        _strategy.pay(amount);  // calls the 'concrete' implementation
     }
 }

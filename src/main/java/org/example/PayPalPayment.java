@@ -1,7 +1,7 @@
 package org.example;
 
 // Concrete Strategy 2
-// A specific payment mechanism
+// A specific (concrete) payment mechanism
 
 class PayPalPayment implements PaymentStrategy {
     private final String email;
@@ -10,6 +10,7 @@ class PayPalPayment implements PaymentStrategy {
         this.email = email;
     }
 
+    // Implementation of the abstract pay() method from the interface
     @Override
     public void pay(double amount) {
         System.out.println("Paid " + amount + " using PayPal account: " + email);
